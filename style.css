@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+:root {
+    --primary-color: #5191fa;
+    --secondary-color: #20c997;
+    --gray: #4a4a4d;
+    --bg-primary: #F7F8F9;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.div-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    text-align: center;
+    max-width: 70%;
+    margin: 50px auto;
+}
+
+.title h1 {
+    margin: 15px;
+    font-size: 30px;
+    color: black;
+}
+
+/*-------------------------------------------
+     ------------ Header ------------
+/*-------------------------------------------*/
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    /* vh = viewport height , tayalkhod tol dial safha kamla*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .navbar {
+    background-color: white;
+    border-bottom: 1px solid #d3d3d3;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4) ;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+header .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+header .navbar nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+header .navbar nav ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+    color: black;
+    font-weight: 500;
+}
+
+header .navbar nav ul li span a {
+    color: var(--primary-color);
+}
+
+/*-------------------------------------------
+     ------------ Container ------------
+/*-------------------------------------------*/
+
+#content {
+    padding: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container .row .col-2 {
+    flex-basis: 48%;
+}
+
+.container .row .col-2 img {
+    max-width: 100%;
+}
+
+.container .row .col-2 h1 {
+    color: black;
+    font-size: 40px;
+}
+
+.container .row .col-2 p {
+    color: rgb(139, 129, 129);
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.container .row .col-2 ul {
+    color: rgb(97, 83, 83);
+    margin-top: 15px;
+}
+
+.container .row .col-2 ul li i {
+    color: #5191fa;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.container .row .col-2 .btn {
+    margin-top: 30px;
+}
+
+.container .btn input {
+    background-color: var(--primary-color);
+    padding: 7px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+
+/*-------------------------------------------
+     ------------ Services ------------
+/*-------------------------------------------*/
+
+#service {
+    background-color: var(--bg-primary);
+    padding: 20px;
+}
+
+#service .row .media {
+    display: flex;
+    flex-basis: 42%;
+    background-color: white;
+    margin: 20px;
+}
+
+#service .row .media img {
+    max-width: 50%;
+}
+
+.media .content {
+    padding: 20px;
+}
+
+.media .content i {
+    color: var(--primary-color);
+    font-size: 40px;
+    margin: 10px;
+}
+
+.media .content h1 {
+    margin-bottom: 15px;
+    color: black;
+}
+
+.media .content p {
+    color: #7c7878;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.media .content input {
+    border: 1px solid #CAB69A;
+    background-color: transparent;
+    padding: 10px;
+    width: 100px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.media .content input:hover {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 500;
+    border: none;
+    transition: 0.7s;
+}
+
+/*-------------------------------------------
+    ------------ Promotion  ------------
+/*-------------------------------------------*/
+
+#promotion {
+    padding: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(image/promotion.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#promotion .row {
+    max-width: 600px;
+    display: block;
+}
+
+#promotion .row h2,
+h1 {
+    color: white;
+}
+
+#promotion .row h1 {
+    font-size: 50px;
+
+}
+
+#promotion .row h1 span {
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+#promotion .row p {
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+#promotion .row input {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+/*-------------------------------------------
+    ------------ Rooms ------------
+/*-------------------------------------------*/
+#rooms {
+    padding: 10px;
+    margin: auto;
+    background-color: var(--bg-primary);
+}
+
+#rooms .row {
+    margin: 20px;
+}
+
+#rooms .row .col-3 {
+    flex-basis: 25%;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px #817b7b;
+}
+
+#rooms .row .col-3 img {
+    max-width: 100%;
+}
+
+#rooms .row .col-3 .content {
+    padding: 10px;
+}
+
+#rooms .row .col-3 .content a {
+    color: black;
+}
+
+#rooms .row .col-3 .content p {
+    color: #7c7878;
+    margin: 10px 0;
+}
+
+#rooms .row .col-3 .content p span {
+    color: #5191fa;
+    font-weight: 500;
+}
+
+#rooms .row .col-3 .content li {
+    display: inline-block;
+    margin-right: 50px;
+    color: #5191fa;
+}
+
+#rooms .row .col-3 .content ul input {
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+/*-------------------------------------------
+    ------------ Latest News  ------------
+/*-------------------------------------------*/
+.latest-news {
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+.latest-news .row .col-3 {
+    flex-basis: 30%;
+    padding: 5px;
+    min-width: 200px;
+}
+
+.latest-news .row .col-3 h2 {
+    font-size: 20px;
+    margin: 10px 0px;
+    color: black;
+    transition: 0.5s;
+}
+
+.latest-news .row .col-3 h2:hover {
+    color: var(--primary-color);
+}
+
+.latest-news .row .col-3 ul>a {
+    color: black;
+    transition: 0.6s;
+}
+
+.latest-news .row .col-3 ul a:hover {
+    color: var(--primary-color);
+}
+
+.latest-news .row .col-3 ul li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.latest-news .row .col-3 p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--gray);
+    letter-spacing: 0.3px;
+}
+
+.latest-news .row .col-3 h5 {
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.latest-news .row .col-3 i {
+    font-size: 14px;
+}
+
+.latest-news .row .col-3 h5:hover {
+    color: var(--primary-color);
+}
+
+.latest-news .row .col-3 img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+/*-------------------------------------------
+    ------------ review  ------------
+/*-------------------------------------------*/
+#review {
+    padding: 10px;
+    margin: 10px auto;
+    background-color: var(--bg-primary);
+}
+
+#review .row .col-3 {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+#review .row .col-3 img {
+    border-radius: 50%;
+    padding: 10px;
+    max-width: 30%;
+}
+
+#review .row .col-3 li i {
+    color: orange;
+    margin-top: 15px;
+}
+
+#review .row .col-3 h1 {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    margin: 10px;
+}
+
+/*-------------------------------------------
+    ------------ Payment ------------
+/*-------------------------------------------*/
+.payment {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.payment .row .col-6 {
+    flex-basis: 15%;
+}
+
+.payment .row .col-6 img {
+    max-width: 60%;
+}
+
+/*-------------------------------------------
+    ------------ Footer ------------
+/*-------------------------------------------*/
+footer {
+    background-color: #222529;
+    padding: 50px 50px 10px 50px;
+    color: white;
+}
+
+footer .row .col-4 {
+    flex-basis: 23%;
+}
+
+footer .widget h4,
+.subscriber h4 {
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    color: #819b9b;
+    font-size: 13px;
+    margin-top: 10px
+}
+
+footer ul li span {
+    display: block;
+    color: white;
+}
+
+footer .tagcloud a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.3846em 0.3846em 0.3846em 0;
+    padding: 0.5em 0.6em 0.65em;
+    border-radius: 0;
+    font-weight: 400;
+    border: 1px solid #313438;
+    color: #a8a8a8;
+    font-size: 13px;
+}
+
+footer .subscriber p {
+    font-size: 13px;
+}
+
+footer .subscriber input {
+    width: 100%;
+    height: 3rem;
+    padding: 0.8rem 2.4rem;
+    border: 0;
+    border-radius: 5rem;
+    background: #292c30;
+    color: #777;
+    font-size: inherit;
+    margin: 20px 0px;
+    outline: none;
+}
+
+footer .subscriber .btn {
+    width: 130px;
+    height: auto;
+    border: 0;
+    border-radius: 5rem;
+    background: #4488cd;
+    text-align: center;
+    padding: 10px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social i {
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    transition: 0.8s;
+}
+
+.social .fa-facebook:hover {
+    background-color: var(--primary-color)
+}
+
+.social .fa-instagram:hover {
+    background-color: rgb(88, 9, 9)
+}
+
+.social .fa-twitter:hover {
+    background-color: var(--primary-color)
+}
+
+.social .fa-youtube:hover {
+    background-color: rgb(243, 92, 92)
+}
+
+.social .fa-pinterest-p:hover {
+    background-color: rgb(241, 75, 75)
+}
+
+footer .footer-bottom p {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+footer .footer-bottom {
+    border-top: 1px solid #777;
+    margin: 15px;
+}
+
+
+/*-------------------------------------------
+    ------------ Media Querie ------------
+/*-------------------------------------------*/
+
+
+@media (max-width:600px) {
+    .div-flex {
+        display: block;
+    }
+
+    .title {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .title h1 {
+        margin: 10px;
+        font-size: 25px;
+    }
+
+    /*------------ header ------------ */
+    header .navbar {
+        position: relative
+    }
+    header .navbar nav {
+        display: block;
+        text-align: center;
+    }
+
+    header .navbar nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    header .navbar nav ul li a {
+        font-weight: 400;
+    }
+
+    /*------------ container ------------ */
+    .container .row {
+        padding: 20px;
+    }
+
+    .container .row .col-2 h1 {
+        font-size: 25px;
+    }
+
+    /*------------ Services ------------ */
+
+    #service .row .media {
+        margin: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    #service .row .media img {
+        max-width: 80%;
+    }
+
+    /*------------ promotion ------------ */
+
+    #promotion .row {
+        max-width: 100%;
+    }
+
+    #promotion .row h2 {
+        font-size: 18PX;
+    }
+
+    #promotion .row h1 {
+        font-size: 30px;
+    }
+
+    #promotion .row p {
+        font-size: 15px;
+    }
+
+    /*------------ Rooms ------------ */
+    #rooms .row .col-3 .content li {
+        margin-right: 10px;
+    }
+
+    /*------------ latest-news ------------ */
+    .latest-news .row .col-3 {
+        flex-basis: 90%;
+        margin: 20px;
+    }
+
+    /*------------ Review ------------ */
+    #review .row .col-3 {
+        max-width: 300px;
+        margin: 60px auto;
+    }
+
+    /*------------ Payment ------------ */
+    .payment {
+        margin: 10px auto;
+    }
+
+    .payment .row {
+        display: flex;
+    }
+    .payment .row .col-6 {
+        flex-basis: 40%;
+        text-align: center;
+    }
+
+    .payment .row .col-6 img {
+        max-width: 60%;
+        margin-bottom: 20px;
+
+    }
+    
+    /*------------ Footer ------------ */
+    footer {
+        padding: 15px;
+    }
+    footer .row .col-4 {
+        flex-basis: 100%;
+    }
+    footer .widget h4,
+.subscriber h4 {
+    margin-top: 50px;
+}
+footer .subscriber input {
+    height: 2.6rem;
+    padding: 0.7rem 2.3rem;
+}
+footer .subscriber .btn {
+    width: 100px;
+    border-radius: 2rem;
+    padding: 5px;
+    font-size: 14px;
+}
+    
+}
+
+
+@media (max-width:800px) {
+    .div-flex {
+        display: block;
+    }
+
+    .title {
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .title h1 {
+        margin: 10px;
+        font-size: 25px;
+    }
+
+    /*------------ header ------------ */
+    header .navbar {
+        position: relative
+    }
+    header .navbar nav {
+        display: block;
+        text-align: center;
+    }
+
+    header .navbar nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    header .navbar nav ul li a {
+        font-weight: 400;
+    }
+
+    /*------------ container ------------ */
+    .container .row {
+        padding: 20px;
+    }
+
+    .container .row .col-2 h1 {
+        font-size: 25px;
+    }
+
+    /*------------ Services ------------ */
+
+    #service .row .media {
+        margin: 20px;
+    }
+
+    #service .row .media img {
+        max-width: 50%;
+    }
+
+    /*------------ promotion ------------ */
+
+    #promotion .row {
+        max-width: 100%;
+    }
+
+    #promotion .row h2 {
+        font-size: 18PX;
+    }
+
+    #promotion .row h1 {
+        font-size: 40px;
+    }
+
+    #promotion .row p {
+        font-size: 14px;
+    }
+
+    /*------------ Rooms ------------ */
+    #rooms .row {
+        display: flex;
+    }
+    #rooms .row .col-3 {
+        flex-basis: 45%;
+        margin: 15px;
+    }
+    #rooms .row .col-3 .content li {
+        margin-right: 10px;
+    }
+
+    /*------------ latest-news ------------ */
+    .latest-news .row {
+        display: flex;
+    }
+    .latest-news .row .col-3 {
+        flex-basis: 45%;
+        margin: 10px;
+    }
+
+    /*------------ Review ------------ */
+    #review .row .col-3 {
+        max-width: 300px;
+        margin: 60px auto;
+    }
+
+    /*------------ Payment ------------ */
+    .payment {
+        margin: 10px auto;
+    }
+
+    .payment .row {
+        display: flex;
+    }
+    .payment .row .col-6 {
+        flex-basis: 45%;
+        text-align: center;
+    }
+
+    .payment .row .col-6 img {
+        max-width: 30%;
+        margin-bottom: 20px;
+
+    }
+    
+    /*------------ Footer ------------ */
+    footer {
+        padding: 10px;
+    }
+    footer .row {
+        display: flex;
+    }
+    footer .row .col-4 {
+        flex-basis: 45%;
+    }
+    footer .widget h4,
+.subscriber h4 {
+    margin-top: 50px;
+}
+footer .subscriber input {
+    height: 2.6rem;
+    padding: 0.7rem 2.3rem;
+}
+footer .subscriber .btn {
+    width: 100px;
+    border-radius: 2rem;
+    padding: 5px;
+    font-size: 14px;
+}
+    
+}
