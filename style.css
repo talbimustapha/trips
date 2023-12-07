@@ -617,14 +617,11 @@ footer .footer-bottom {
     }
 
     /*------------ promotion ------------ */
-
+    #promotion {
+        padding: 20px;
+    }
     #promotion .row {
         max-width: 100%;
-    }
-
-    #promotion .row h2 {
-        font-size: 50px;
-    
     }
 
     #promotion .row p {
