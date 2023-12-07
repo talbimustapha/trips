@@ -399,13 +399,17 @@ h1 {
 /*-------------------------------------------*/
 #review {
     padding: 10px;
-    margin: 10px auto;
+    margin: 20px auto;
     background-color: var(--bg-primary);
 }
 
 #review .row .col-3 {
-    flex-basis: 30%;
+    flex-basis: 25%;
     text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
 }
 
 #review .row .col-3 img {
@@ -420,7 +424,7 @@ h1 {
 }
 
 #review .row .col-3 h1 {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.8);
     font-size: 20px;
     margin: 10px;
 }
@@ -642,7 +646,8 @@ footer .footer-bottom {
     /*------------ Review ------------ */
     #review .row .col-3 {
         max-width: 300px;
-        margin: 60px auto;
+        margin: auto;
+        margin: 10px;
     }
 
     /*------------ Payment ------------ */
