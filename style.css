@@ -38,34 +38,66 @@
 }
 
 /*-------------------------------------------
-     ------------ Header ------------
+     ------------ Top Navbar ------------
 /*-------------------------------------------*/
 
+.top-nav {
+    background-color: #3C70F4;
+}
+
+.top-nav ul li {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+
+}
+
+.top-nav ul li::before {
+    content: '';
+    border-left: 1px solid rgb(247, 238, 238);
+    height: 100%;
+    padding-left: 10px;
+}
+
+.top-nav ul li i {
+    color: white;
+    margin-right: 3px;
+
+}
+
+.top-nav ul li a {
+    color: white;
+    font-size: 14px;
+}
+
+.top-nav .social-media i {
+    color: white;
+    margin-right: 12px;
+    font-size: 17px;
+}
+
+/*-------------------------------------------
+     ------------ Header ------------
+/*-------------------------------------------*/
 .text-primary {
-    color: var(--primary-color);
+    color: white
 }
 
 header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(image/image-header.jpg);
+    background-position: center;
+    background-size: cover;
     width: 100%;
-    height: 20vh;
+    height: 105vh;
     /* vh = viewport height , tayalkhod tol dial safha kamla*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 header .navbar {
-    background-color: white;
-    border-bottom: 1px solid #d3d3d3;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.4) ;
-}
-
-header nav a {
-    text-decoration: none;
-    color: var(--secondary-color);
+    background: transparent;
 }
 
 header .navbar nav {
@@ -77,6 +109,17 @@ header .navbar nav {
     padding: 20px;
 }
 
+header .navbar nav #toggler {
+    display: none;
+}
+header .navbar nav .fa-bars {
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    display: none;
+}
 header .navbar nav ul li {
     display: inline-block;
     list-style-type: none;
@@ -87,13 +130,61 @@ header .navbar nav ul li a {
     text-decoration: none;
     text-transform: capitalize;
     transition: 0.4s;
-    color: black;
+    color: white;
     font-weight: 500;
 }
 
-header .navbar nav ul li span a {
-    color: var(--primary-color);
+.navbar #nav .menu-icon {
+
+    width: 25px;
+    display: none;
+    color: white;
 }
+
+header .header-content {
+    text-align: center;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+header .header-content h3 {
+    color: white;
+
+}
+
+header .header-content h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+header .header-content .btn-header,
+.navbar .btn-header {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15x;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.header-content {
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 5px 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /*-------------------------------------------
      ------------ Container ------------
@@ -154,7 +245,6 @@ header .navbar nav ul li span a {
     cursor: pointer;
 
 }
-
 
 /*-------------------------------------------
      ------------ Services ------------
@@ -239,7 +329,7 @@ h1 {
 }
 
 #promotion .row h1 {
-    font-size: 20px;
+    font-size: 50px;
 
 }
 
@@ -252,7 +342,6 @@ h1 {
     color: white;
     line-height: 1.7;
     margin-bottom: 25px;
-
 }
 
 #promotion .row input {
@@ -400,17 +489,24 @@ h1 {
 /*-------------------------------------------*/
 #review {
     padding: 10px;
-    margin: 20px auto;
+    margin: 10px auto;
     background-color: var(--bg-primary);
+
 }
 
 #review .row .col-3 {
     flex-basis: 25%;
     text-align: center;
     background-color: white;
+    border-radius: 15px;
     padding: 10px;
-    border-radius: 20px;
-    margin: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+}
+
+#review .row .col-3:hover {
+    transform: scale(1.1);
 }
 
 #review .row .col-3 img {
@@ -425,7 +521,7 @@ h1 {
 }
 
 #review .row .col-3 h1 {
-    color: rgba(0, 0, 0, 0.8);
+    color: black;
     font-size: 20px;
     margin: 10px;
 }
@@ -492,7 +588,7 @@ footer .subscriber p {
 }
 
 footer .subscriber input {
-    width: 100%;
+    width: 90%;
     height: 3rem;
     padding: 0.8rem 2.4rem;
     border: 0;
@@ -580,26 +676,50 @@ footer .footer-bottom {
         font-size: 25px;
     }
 
-    /*------------ header ------------ */
-    header {
-        height: 26vh;
-    }
-    header .navbar {
-        position: relative
-    }
-    header .navbar nav {
-        display: block;
-        text-align: center;
+    /*------------ Top Nav bar ------------ */
+    .top-nav ul {
+        display: none;
     }
 
-    header .navbar nav ul li {
-        display: inline-block;
-        margin-right: 10px;
+    .top-nav .social-media {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .top-nav .social-media i {
+        font-size: 25px;
+        margin-right: 20px;
+    }
+
+    /*------------ header ------------ */
+    header .navbar {
+        position: relative;
+        width: 100%;
+    }
+
     header .navbar nav ul li a {
         font-weight: 400;
     }
+    header .navbar nav .fa-bars {
+        display: block;
+    }
+    header .navbar nav ul{
+        position: absolute;
+        top: 100%; right: 10%; left: 1%;
+        background: black;
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+        height: auto;
+        display: block;
+    }
+    header .navbar nav ul li{
+        display: block;
+        margin: 10px;
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
 
+    }
     /*------------ container ------------ */
     .container .row {
         padding: 20px;
@@ -618,15 +738,21 @@ footer .footer-bottom {
     }
 
     #service .row .media img {
-        display: none;
+        max-width: 80%;
     }
 
     /*------------ promotion ------------ */
-    #promotion {
-        padding: 20px;
-    }
+
     #promotion .row {
         max-width: 100%;
+    }
+
+    #promotion .row h2 {
+        font-size: 18PX;
+    }
+
+    #promotion .row h1 {
+        font-size: 30px;
     }
 
     #promotion .row p {
@@ -647,193 +773,44 @@ footer .footer-bottom {
     /*------------ Review ------------ */
     #review .row .col-3 {
         max-width: 300px;
-        margin: auto;
-        margin: 10px;
-    }
-
-    /*------------ Payment ------------ */
-    .payment {
-        margin: 10px auto;
-    }
-
-    .payment .row {
-        display: flex;
-    }
-    .payment .row .col-6 {
-        flex-basis: 40%;
-        text-align: center;
-    }
-
-    .payment .row .col-6 img {
-        max-width: 60%;
-        margin-bottom: 20px;
-
-    }
-    
-    /*------------ Footer ------------ */
-    footer {
-        padding: 15px;
-    }
-    footer .row .col-4 {
-        flex-basis: 100%;
-    }
-    footer .widget h4,
-.subscriber h4 {
-    margin-top: 50px;
-}
-footer .subscriber input {
-    height: 2.6rem;
-    padding: 0.7rem 2.3rem;
-}
-footer .subscriber .btn {
-    width: 100px;
-    border-radius: 2rem;
-    padding: 5px;
-    font-size: 14px;
-}
-    
-}
-
-
-@media (max-width:800px) {
-    .div-flex {
-        display: block;
-    }
-
-    .title {
-        max-width: 90%;
-        margin: 10px auto;
-    }
-
-    .title h1 {
-        margin: 10px;
-        font-size: 25px;
-    }
-
-    /*------------ header ------------ */
-    header .navbar {
-        position: relative
-    }
-    header .navbar nav {
-        display: block;
-        text-align: center;
-    }
-
-    header .navbar nav ul li {
-        display: inline-block;
-        margin-right: 10px;
-    }
-    header .navbar nav ul li a {
-        font-weight: 400;
-    }
-
-    /*------------ container ------------ */
-    .container .row {
-        padding: 20px;
-    }
-
-    .container .row .col-2 h1 {
-        font-size: 25px;
-    }
-
-    /*------------ Services ------------ */
-
-    #service .row .media {
-        margin: 20px;
-    }
-
-    #service .row .media img {
-        max-width: 50%;
-    }
-
-    /*------------ promotion ------------ */
-
-    #promotion .row {
-        max-width: 100%;
-    }
-
-    #promotion .row h2 {
-        font-size: 18px;
-    }
-
-    #promotion .row h1 {
-        font-size: 30px;
-    }
-
-    #promotion .row p {
-        font-size: 14px;
-    }
-
-    /*------------ Rooms ------------ */
-    #rooms .row {
-        display: flex;
-    }
-    #rooms .row .col-3 {
-        flex-basis: 100%;
-        margin: 15px;
-    }
-    #rooms .row .col-3 .content li {
-        margin-right: 10px;
-    }
-
-    /*------------ latest-news ------------ */
-    .latest-news .row {
-        display: flex;
-    }
-    .latest-news .row .col-3 {
-        flex-basis: 100%;
-        margin: 10px;
-    }
-
-    /*------------ Review ------------ */
-    #review .row .col-3 {
-        max-width: 300px;
         margin: 60px auto;
     }
 
     /*------------ Payment ------------ */
     .payment {
-        margin: 10px auto;
+        margin: 40px auto;
     }
 
     .payment .row {
-        display: flex;
+        display: flex
     }
+
     .payment .row .col-6 {
-        flex-basis: 45%;
+        flex-basis: 50%;
         text-align: center;
     }
 
     .payment .row .col-6 img {
-        max-width: 30%;
+        max-width: 45%;
         margin-bottom: 20px;
 
+
     }
-    
+
     /*------------ Footer ------------ */
-    footer {
-        padding: 10px;
-    }
-    footer .row {
-        display: block;
-    }
     footer .row .col-4 {
         flex-basis: 100%;
-        padding: 20px;
     }
+
     footer .widget h4,
-.subscriber h4 {
-    margin-top: 50px;
+    .subscriber h4 {
+        margin-top: 40px;
+    }
 }
-footer .subscriber input {
-    height: 2.6rem;
-    padding: 0.7rem 2.3rem;
-}
-footer .subscriber .btn {
-    width: 100px;
-    border-radius: 2rem;
-    padding: 5px;
-    font-size: 14px;
-}
-    
+
+@media (max-width:901px) {
+    header .navbar nav {
+        padding: 5px;
+    }
+
 }
